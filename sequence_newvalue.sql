@@ -19,3 +19,5 @@ EXECUTE IMMEDIATE 'ALTER SEQUENCE ' || seqowner || '.' || seqname
 || ' INCREMENT BY ' || ib;
 END IF;
 END;
+
+-- EXEC sequence_newvalue( 'GOKHAN', 'SAMPLE_SEQ', 10000 );
