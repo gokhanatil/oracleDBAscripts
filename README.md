@@ -1,4 +1,4 @@
-plsql
-=====
+DBA Scripts
+===========
 
-SQL queries and PL/SQL scripts for DBAs
+Various SQL, PL/SQL, Perl, Python scripts for DBAs
