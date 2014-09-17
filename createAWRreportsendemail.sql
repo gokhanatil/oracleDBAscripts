@@ -6,8 +6,8 @@ DECLARE
    starttime      CHAR (5);
    endtime        CHAR (5);
    v_from         VARCHAR2 (80);
-   v_recipient    VARCHAR2 (80) := 'gokhan@myemailaddress.com';
-   v_mail_host    VARCHAR2 (30) := 'oursmtpserver';
+   v_recipient    VARCHAR2 (80) := 'gokhan@myemailaddress.com'; -- your email
+   v_mail_host    VARCHAR2 (30) := 'oursmtpserver'; -- your smtp server
    v_mail_conn    UTL_SMTP.connection;
 BEGIN
    starttime := '06:00';
