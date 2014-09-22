@@ -64,7 +64,7 @@ print " ...Creation date = $exportdate \n";
 } elsif ($magic2 == 68 ) {
 
 my ($charset ) = unpack 'x2C', $buffer;
-my ($exportdate) = unpack 'x108a20', $buffer;
+my ($exportdate) = unpack 'x109a20', $buffer;
 my ($exportver) = unpack 'x13a8', $buffer;
 
 print " ........Filetype = Classic Export file\n"; 
