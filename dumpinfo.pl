@@ -50,27 +50,23 @@ print " .......Blocksize = $blocksize \n";
 
 } elsif ($magic2 == 69  ) {
 
-my ($charset ) = unpack 'x2C', $buffer;
 my ($exportdate) = unpack 'x108a20', $buffer;
 my ($exportver) = unpack 'x11a8', $buffer;
 
 print " ........Filetype = Classic Export file\n"; 
 print " ..Export Version = $exportver \n";
 print " .....Direct Path = 0 (Conventional Path) \n";
-print " .Characterset ID = $charset \n";
 print " ...Creation date = $exportdate \n";
 
 
 } elsif ($magic2 == 68 ) {
 
-my ($charset ) = unpack 'x2C', $buffer;
 my ($exportdate) = unpack 'x109a20', $buffer;
 my ($exportver) = unpack 'x13a8', $buffer;
 
 print " ........Filetype = Classic Export file\n"; 
 print " ..Export Version = $exportver \n";
 print " .....Direct Path = 1 (Direct Path) \n";
-print " .Characterset ID = $charset \n";
 print " ...Creation date = $exportdate \n";
 
 
