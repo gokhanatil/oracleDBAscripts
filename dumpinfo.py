@@ -59,23 +59,19 @@ if (magic1==49):
     print ' .......Blocksize = ' + str(blocksize)
     
 elif (magic2 == 69):
-    charset  = struct.unpack_from( 'B', buffer, 2 )[0]
     exportdate = struct.unpack_from( '20s', buffer, 108 )[0]
-    exportver = struct.unpack_from( '8s', buffer, 11 )
+    exportver = struct.unpack_from( '8s', buffer, 11 )[0]
     print ' ........Filetype = Classic Export file'
     print ' ..Export Version = ' + str(exportver)
     print ' .....Direct Path = 0 (Conventional Path)'
-    print ' .Characterset ID = ' + str(charset)
     print ' ...Creation date = ' + exportdate
 
 elif (magic2 == 68):
-    charset  = struct.unpack_from( 'B', buffer, 2 )[0]
     exportdate = struct.unpack_from( '20s', buffer, 109 )[0]
-    exportver = struct.unpack_from( '8s', buffer, 13 )
+    exportver = struct.unpack_from( '8s', buffer, 13 )[0]
     print ' ........Filetype = Classic Export file'
     print ' ..Export Version = ' + str(exportver)
     print ' .....Direct Path = 1 (Direct Path)'
-    print ' .Characterset ID = ' + str(charset)
     print ' ...Creation date = ' + exportdate
 
 else:
